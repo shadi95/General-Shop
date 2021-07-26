@@ -15,4 +15,12 @@ class Product extends Model
         'unit', 'price', 
         'total', 
     ];
+
+    public function images(){
+        return $this->hasMany(Image::class);
+    }
+
+    public function reviews(){
+        return $this->hasMany(Review::class);
+    }
 }

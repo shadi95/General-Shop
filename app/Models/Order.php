@@ -15,4 +15,16 @@ class Order extends Model
         'cart_id', 
         'oder_date', 
     ];
+
+    public function customer(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function cart(){
+        return $this->hasOne(Cart::class);
+    }
+
+    public function payment(){
+        return $this->hasOne(Payment::class);
+    }  
 }

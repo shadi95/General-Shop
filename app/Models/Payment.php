@@ -16,4 +16,12 @@ class Payment extends Model
         'paid_on', 
         'payment_reference', 
     ];
+
+    public function customer(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function order(){
+        return $this->belongsTo(Order::class);
+    }
 }
