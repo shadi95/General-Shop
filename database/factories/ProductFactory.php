@@ -27,6 +27,7 @@ class ProductFactory extends Factory
             'unit'        => $this->faker->randomElement(["kilo", "gram"]),
             'price'       => $this->faker->randomFloat(2, 10, 500),
             'total'       => $this->faker->numberBetween(2, 250),
+            'category_id' => $this->faker->numberBetween(1, 50),
         ];
     }
 }

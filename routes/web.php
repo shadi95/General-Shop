@@ -8,6 +8,7 @@ use App\Http\Controllers\DataImportController;
 use App\Models\City;
 use App\Models\Country;
 use App\Models\State;
+use App\Models\Tag;
 use GuzzleHttp\Middleware;
 
 /*
@@ -34,6 +35,16 @@ Route::get('images', function () {
 
 Route::get('city', function () {
     return State::with(['country', 'cities'])-> paginate(5);    
+});
+
+Route::get('tag_test', function () {
+    $tag = Tag::find(2);
+    return $tag->products;
+});
+
+Route::get('role_test', function () {
+    $user = User::find(1);
+    return $user->roles;
 });
 
 //Route::get('units-test', [DataImportController::class, 'importUnits']);
