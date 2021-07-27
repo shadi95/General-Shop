@@ -4,6 +4,7 @@ use App\Models\Image;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DataImportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,8 @@ Route::get('products', function () {
 Route::get('images', function () {
     return Image::paginate(10);
 });
+
+//Route::get('units-test', [DataImportController::class, 'importUnits']);
 
 Route::get('/', function () {
     return view('welcome');
