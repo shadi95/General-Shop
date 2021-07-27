@@ -8,6 +8,7 @@ use App\Http\Controllers\DataImportController;
 use App\Models\City;
 use App\Models\Country;
 use App\Models\State;
+use GuzzleHttp\Middleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,10 @@ Route::get('city', function () {
 });
 
 //Route::get('units-test', [DataImportController::class, 'importUnits']);
+
+Route::get('test_email', function() {
+    return 'Hello';    
+})->Middleware(['auth', 'email_verified']);
 
 Route::get('/', function () {
     return view('welcome');
