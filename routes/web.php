@@ -5,6 +5,9 @@ use App\Models\Product;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataImportController;
+use App\Models\City;
+use App\Models\Country;
+use App\Models\State;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,11 +24,15 @@ Route::get('users', function () {
 });
 
 Route::get('products', function () {
-    return Product::with(['images'])->paginate(10);
+    return Product::with(['images'])->paginate(3);
 });
 
 Route::get('images', function () {
     return Image::paginate(10);
+});
+
+Route::get('city', function () {
+    return State::with(['country', 'cities'])-> paginate(5);    
 });
 
 //Route::get('units-test', [DataImportController::class, 'importUnits']);
