@@ -51,7 +51,7 @@ Route::get('role_test', function () {
 
 Route::get('test_email', function() {
     return 'Hello';    
-})->Middleware(['auth', 'email_verified']);
+})->Middleware(['auth', 'user_is_support']);
 
 Route::get('/', function () {
     return view('welcome');
