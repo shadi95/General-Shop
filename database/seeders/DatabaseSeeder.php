@@ -8,6 +8,7 @@ use App\Models\Image;
 use App\Models\Product;
 use App\Models\Role;
 use App\Models\Tag;
+use App\Models\Ticket;
 use App\Models\User;
 use Faker\Factory;
 use Illuminate\Database\Seeder;
@@ -29,6 +30,8 @@ class DatabaseSeeder extends Seeder
         //Category::factory(50)->create();   
         //Tag::factory(50)->create();  
         //Role::factory(50)->create(); 
+        Ticket::factory(150)->create(); 
+
 
 
     }
