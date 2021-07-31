@@ -66,7 +66,7 @@
                                 </a>
 
                                 <a class="dropdown-item" href="{{ route('products') }}">
-                                    {{ __('Product') }}
+                                    {{ __('Products') }}
                                 </a>
 
                                 <a class="dropdown-item" href="{{ route('tags') }}">
