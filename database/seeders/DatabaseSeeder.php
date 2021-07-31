@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
         //Category::factory(50)->create();   
         //Tag::factory(50)->create();  
         //Role::factory(50)->create(); 
-        Ticket::factory(150)->create(); 
+        //Ticket::factory(150)->create(); 
 
 
 
