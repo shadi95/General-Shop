@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class TicketController extends Controller
 {
     public function index(){
-        $units = Ticket::paginate(20);
-        return view('admin.units.units')->with(['units' => $units]);
+        $tickets = Ticket::paginate(env("PAGINATION_COUNT"));
+        return view('admin.tickets.tickets')->with(['tickets' => $tickets]);
     }
 }

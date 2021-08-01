@@ -18,17 +18,19 @@
 
                         <div class="row">
 
-                            @foreach( $categories as $category)
+                            @foreach( $cities as $city)
                             <div class="col-md-3">
                                 <div class="alert alert-primary" role="alert">
-                                    <p>{{ $category->name }}</p>
+                                    <p>{{ $city->name }}</p>
+                                    <p>{{ $city->country->name }}</p>
+                                    <p>{{ $city->state->name }}</p>
                                 </div>                                
                             </div>
                             @endforeach
 
                         </div>
 
-                        {{ $categories->links() }}
+                        {{ $cities->links() }}
 
                     </div>
 

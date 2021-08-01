@@ -12,6 +12,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ShipmentController;
 use App\Http\Controllers\StateController;
 use App\Http\Controllers\TagController;
@@ -116,6 +117,6 @@ Route::middleware(['auth', 'user_is_admin'])->group(function () {
     Route::get('tickets',[TicketController::class, 'index'])->name('tickets');
 
     //Roles
-    Route::get('roles',[Role::class, 'index'])->name('roles');
+    Route::get('roles',[RoleController::class, 'index'])->name('roles');
 
 });

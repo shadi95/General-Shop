@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class TagController extends Controller
 {
     public function index(){
-        $units = Tag::paginate(20);
-        return view('admin.units.units')->with(['units' => $units]);
+        $tags = Tag::paginate(env("PAGINATION_COUNT"));
+        return view('admin.tags.tags')->with(['tags' => $tags]);
     }
 }

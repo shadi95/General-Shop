@@ -18,17 +18,17 @@
 
                         <div class="row">
 
-                            @foreach( $categories as $category)
+                            @foreach( $tags as $tag)
                             <div class="col-md-3">
                                 <div class="alert alert-primary" role="alert">
-                                    <p>{{ $category->name }}</p>
+                                    <p>{{ $tag->tag }}</p>
                                 </div>                                
                             </div>
                             @endforeach
 
                         </div>
 
-                        {{ $categories->links() }}
+                        {{ $tags->links() }}
 
                     </div>
 

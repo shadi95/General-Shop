@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ReviewController extends Controller
 {
     public function index(){
-        $units = Review::paginate(20);
-        return view('admin.units.units')->with(['units' => $units]);
+        $reviews = Review::with(['customer'])-> paginate(20);
+        return view('admin.reviews.reviews')->with(['reviews' => $reviews]);
     }
 }

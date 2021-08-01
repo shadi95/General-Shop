@@ -12,23 +12,21 @@
 
                 <div class="card">
 
-                    <div class="card-header">categories</div>
+                    <div class="card-header">Roles</div>
 
                     <div class="card-body">
 
                         <div class="row">
 
-                            @foreach( $categories as $category)
+                            @foreach( $roles as $role)
                             <div class="col-md-3">
                                 <div class="alert alert-primary" role="alert">
-                                    <p>{{ $category->name }}</p>
+                                    <p>{{ $role->role }}</p>
                                 </div>                                
                             </div>
                             @endforeach
 
                         </div>
-
-                        {{ $categories->links() }}
 
                     </div>
 

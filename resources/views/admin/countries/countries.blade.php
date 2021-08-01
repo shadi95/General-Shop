@@ -18,17 +18,19 @@
 
                         <div class="row">
 
-                            @foreach( $categories as $category)
+                            @foreach( $countries as $countrory)
                             <div class="col-md-3">
                                 <div class="alert alert-primary" role="alert">
-                                    <p>{{ $category->name }}</p>
+                                    <p>{{ $countrory->name }}</p>
+                                    <p>Currency: {{ $countrory->currency }}</p>
+                                    <p>Capital: {{ $countrory->capital }}</p>
                                 </div>                                
                             </div>
                             @endforeach
 
                         </div>
 
-                        {{ $categories->links() }}
+                        {{ $countries->links() }}
 
                     </div>
 

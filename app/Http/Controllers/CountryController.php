@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class CountryController extends Controller
 {
     public function index(){
-        $units = Country::paginate(20);
-        return view('admin.units.units')->with(['units' => $units]);
+        $countries = Country::paginate(20);
+        return view('admin.countries.countries')->with(['countries' => $countries]);
     }
 }

@@ -8,7 +8,9 @@ use Illuminate\Http\Request;
 class RoleController extends Controller
 {
     public function index(){
-        $units = Role::paginate(20);
-        return view('admin.units.units')->with(['units' => $units]);
+        
+        return view('admin.roles.roles')->with([
+            'roles' => Role::all()
+        ]);
     }
 }

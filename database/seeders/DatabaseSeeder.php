@@ -6,6 +6,7 @@ use App\Models\Address;
 use App\Models\Category;
 use App\Models\Image;
 use App\Models\Product;
+use App\Models\Review;
 use App\Models\Role;
 use App\Models\Tag;
 use App\Models\Ticket;
@@ -31,8 +32,7 @@ class DatabaseSeeder extends Seeder
         //Tag::factory(50)->create();  
         //Role::factory(50)->create(); 
         //Ticket::factory(150)->create(); 
-
-
+        //Review::factory(100)->create(); 
 
     }
 }

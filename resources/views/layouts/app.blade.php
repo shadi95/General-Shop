@@ -12,6 +12,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://kit.fontawesome.com/e8ede5f4b8.js" crossorigin="anonymous"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -71,6 +72,30 @@
 
                                 <a class="dropdown-item" href="{{ route('tags') }}">
                                     {{ __('Tags') }}
+                                </a>
+
+                                <a class="dropdown-item" href="{{ route('countries') }}">
+                                    {{ __('countries') }}
+                                </a>
+
+                                <a class="dropdown-item" href="{{ route('states') }}">
+                                    {{ __('states') }}
+                                </a>
+
+                                <a class="dropdown-item" href="{{ route('cities') }}">
+                                    {{ __('cities') }}
+                                </a>
+
+                                <a class="dropdown-item" href="{{ route('roles') }}">
+                                    {{ __('roles') }}
+                                </a>
+
+                                <a class="dropdown-item" href="{{ route('reviews') }}">
+                                    {{ __('reviews') }}
+                                </a>
+
+                                <a class="dropdown-item" href="{{ route('tickets') }}">
+                                    {{ __('tickets') }}
                                 </a>
 
                                 <a class="dropdown-item" href="{{ route('units') }}">

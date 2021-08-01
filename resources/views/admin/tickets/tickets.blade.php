@@ -12,24 +12,25 @@
 
                 <div class="card">
 
-                    <div class="card-header">categories</div>
+                    <div class="card-header">tickets</div>
 
                     <div class="card-body">
 
                         <div class="row">
 
-                            @foreach( $states as $state)
+                            @foreach( $tickets as $ticket)
                             <div class="col-md-3">
                                 <div class="alert alert-primary" role="alert">
-                                    <h5>{{ $state->name }}</h5>
-                                    <p> country: {{ $state->country->name }}</p>
+                                    <p>{{ $ticket->customer->formattedName() }}</p>
+                                    <p>status: {{$ticket->status}} </p>
+                                    <p>title: {{$ticket->title}} </p>
                                 </div>                                
                             </div>
                             @endforeach
 
                         </div>
 
-                        {{ $states->links() }}
+                        {{ $tickets->links() }}
 
                     </div>
 
