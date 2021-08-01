@@ -32,7 +32,7 @@
 
                         </div>
 
-                        
+                        {{ $products->links() }}
 
                     </div>
 
