@@ -82,6 +82,10 @@ Route::middleware(['auth', 'user_is_admin'])->group(function () {
 
     //Units
     Route::get('units',[Unitcontroller::class, 'index'])->name('units');
+    Route::post('units',[Unitcontroller::class, 'store']);
+    Route::delete('units',[Unitcontroller::class, 'delete']);
+    Route::put('units',[Unitcontroller::class, 'update']);
+    Route::post('search-units', [Unitcontroller::class, 'search'] )->name('search-units');
     
     //Categories 
     Route::get('categories',[CategoryController::class, 'index'])->name('categories');
