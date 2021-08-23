@@ -96,6 +96,10 @@ Route::middleware(['auth', 'user_is_admin'])->group(function () {
     
     //Categories 
     Route::get('categories',[CategoryController::class, 'index'])->name('categories');
+    Route::post('categories',[CategoryController::class, 'store']);
+    Route::delete('categories',[CategoryController::class, 'delete']);
+    Route::put('categories',[CategoryController::class, 'update']);
+    Route::get('search-categories',[CategoryController::class, 'search'] )->name('search-categories');
 
     //Products 
     Route::get('products',[ProductController::class, 'index'])->name('products');
