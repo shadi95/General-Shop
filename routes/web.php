@@ -85,16 +85,20 @@ Route::middleware(['auth', 'user_is_admin'])->group(function () {
     Route::post('units',[Unitcontroller::class, 'store']);
     Route::delete('units',[Unitcontroller::class, 'delete']);
     Route::put('units',[Unitcontroller::class, 'update']);
-    Route::post('search-units', [Unitcontroller::class, 'search'] )->name('search-units');
+    Route::get('search-units', [Unitcontroller::class, 'search'] )->name('search-units');
+
+    //Tags 
+    Route::get('tags',[TagController::class, 'index'])->name('tags');
+    Route::post('tags',[TagController::class, 'store']);
+    Route::delete('tags',[TagController::class, 'delete']);
+    Route::put('tags',[TagController::class, 'update']);
+    Route::get('search-tags',[TagController::class, 'search'] )->name('search-tags');
     
     //Categories 
     Route::get('categories',[CategoryController::class, 'index'])->name('categories');
 
     //Products 
     Route::get('products',[ProductController::class, 'index'])->name('products');
-
-    //Tags 
-    Route::get('tags',[TagController::class, 'index'])->name('tags');
 
     //Payments 
     Route::get('payments',[PaymentController::class, 'index'])->name('payments');
