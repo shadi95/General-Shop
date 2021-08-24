@@ -11,7 +11,7 @@
 
                         <div class="card-body">
                             <!-- Units Search -->
-                            <form action=" {{ route('search-units') }}" method="post">
+                            <form action=" {{ route('search-units') }}" method="get">
                                 @csrf
                                 <div class="row">
 
